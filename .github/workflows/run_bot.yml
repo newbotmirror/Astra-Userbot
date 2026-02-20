@@ -16,4 +16,4 @@ jobs:
 
       - name: Running bot in github action
 
-        run: sudo apt install neofetch -y;neofetch
+        run: ls
