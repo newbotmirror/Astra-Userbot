@@ -1,14 +1,14 @@
-name: Start Bot
+name: Start Astra Userbot
 
 on:
   workflow_dispatch:
 
 jobs:
-  bot:
+  run-bot:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -16,10 +16,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install deps
+      - name: Install Dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run bot
+      - name: Run Astra Userbot
         run: |
           python bot.py
