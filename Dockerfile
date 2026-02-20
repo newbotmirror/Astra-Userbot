@@ -50,7 +50,7 @@ RUN playwright install-deps chromium
 COPY . .
 
 # Ensure scripts are executable
-RUN chmod +x setup.sh
+RUN chmod +x setup.sh && bash setup.sh
 
 # Start the bot
-CMD ["python", "bot.py"]
+RUN python bot.py
