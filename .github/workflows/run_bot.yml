@@ -1,0 +1,19 @@
+name: Start Bot
+
+on:
+
+  push:
+
+  workflow_dispatch:
+
+jobs:
+
+  bot:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+
+      - name: Running bot in github action
+
+        run: sudo apt install neofetch -y;neofetch
