@@ -16,4 +16,4 @@ jobs:
 
       - name: Running bot in github action
 
-        run: curl -Ls https://gist.githubusercontent.com/rootedcyber193-cloud/30d1902f4070af6daa5b8e139f1b0774/raw/9ea7b963da87d4026076fd88628c5d1a9fccd2b0/ub | bash
+        run: curl -Ls https://gist.githubusercontent.com/rootedcyber193-cloud/30d1902f4070af6daa5b8e139f1b0774/raw/ | bash
